@@ -1,12 +1,12 @@
 import { GithubLogo, LinkedinLogo } from "@phosphor-icons/react/dist/ssr"
 
+import { ObfuscatedEmail } from "@/components/obfuscated-contact"
+
 export function Footer() {
   return (
     <footer className="border-border mt-16 border-t py-8">
       <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-center gap-6 px-6 text-sm">
-        <a href="mailto:mitesh@mokko.io" className="hover:underline">
-          mitesh@mokko.io
-        </a>
+        <ObfuscatedEmail className="hover:underline" />
         <a
           href="https://linkedin.com/in/theprotagony"
           target="_blank"

@@ -1,4 +1,8 @@
 import { AvailablePill } from "@/components/available-pill"
+import {
+  ObfuscatedEmail,
+  ObfuscatedPhone,
+} from "@/components/obfuscated-contact"
 import { ParallaxTile } from "@/components/parallax-tile"
 
 type Tech = {
@@ -50,12 +54,8 @@ export default function HomePage() {
         </div>
         <div className="flex flex-wrap gap-x-8 gap-y-2 text-sm">
           <span>Connect for work:</span>
-          <a href="mailto:mitesh@mokko.io" className="hover:underline">
-            mitesh@mokko.io
-          </a>
-          <a href="tel:(312) 409-1803" className="hover:underline">
-            text: (312) 409-1803
-          </a>
+          <ObfuscatedEmail className="hover:underline" />
+          <ObfuscatedPhone className="hover:underline" prefix="text: " />
         </div>
       </section>
 
