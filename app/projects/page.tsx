@@ -21,9 +21,9 @@ const projects: Project[] = [
 
 export default function ProjectsPage() {
   return (
-    <div className="max-w-5xl">
+    <div>
       <h1 className="mb-6 text-4xl font-bold">Projects</h1>
-      <p className="mb-8 leading-relaxed">
+      <p className="mb-8 max-w-3xl leading-relaxed">
         Take a look at some of my finest work in the last 15 years. Lately I
         have been obsessed with React based Design Systems.
       </p>

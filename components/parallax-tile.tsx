@@ -66,7 +66,7 @@ export function ParallaxTile({
       onMouseLeave={handleMouseLeave}
     >
       <motion.div
-        className="relative flex h-full w-full flex-col items-center justify-center rounded-lg p-4 font-bold shadow-sm transition-shadow duration-500 ease-out [transform-style:preserve-3d] hover:shadow-xl"
+        className="relative flex h-full w-full flex-col items-center justify-center gap-3 rounded-lg p-8 font-bold shadow-sm transition-shadow duration-500 ease-out [transform-style:preserve-3d] hover:shadow-xl"
         style={{
           backgroundColor: bg,
           color,
@@ -79,7 +79,7 @@ export function ParallaxTile({
           className="pointer-events-none flex flex-col items-center text-center antialiased"
           style={{ transform: "translateZ(30px)" }}
         >
-          {logo && <img src={logo} alt="" className="h-16" />}
+          {logo && <img src={logo} alt="" className="h-10" />}
           {label}
           {children}
         </div>

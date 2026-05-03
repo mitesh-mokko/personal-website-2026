@@ -61,7 +61,7 @@ export default function RootLayout({
       <body className="flex min-h-svh flex-col">
         <ThemeProvider>
           <Navbar />
-          <main className="container mx-auto flex-1 px-6 py-10">
+          <main className="mx-auto w-full max-w-6xl flex-1 px-6 py-10">
             {children}
           </main>
           <Footer />

@@ -10,13 +10,17 @@ type Tech = {
 }
 
 const techStack: Tech[] = [
-  { id: "1", name: "React", color: "#61dafb", bg: "#222", logo: "/img/react-icon.svg" },
-  { id: "2", name: "React Native", color: "#61dafb", bg: "#222", logo: "/img/react-icon.svg" },
-  { id: "3", name: "Node.js", bg: "#026e00", logo: "/img/nodejs-icon.svg" },
-  { id: "4", name: "MongoDB", bg: "#13aa52", logo: "/img/mongodb-icon.svg" },
-  { id: "5", name: "Express", bg: "#eeeeee", color: "black" },
-  { id: "6", name: "Expo", bg: "#4630eb", logo: "/img/expo-icon.svg" },
-  { id: "7", name: "Next.js", bg: "#2a84ff" },
+  { id: "next", name: "Next.js", bg: "#000", color: "#fff", logo: "/img/tech/nextjs.svg" },
+  { id: "react", name: "React", bg: "#222", color: "#61DAFB", logo: "/img/tech/react.svg" },
+  { id: "tailwind", name: "Tailwind", bg: "#38BDF8", color: "#0F172A", logo: "/img/tech/tailwind.svg" },
+  { id: "supabase", name: "Supabase", bg: "#3ECF8E", color: "#1C1C1C", logo: "/img/tech/supabase.svg" },
+  { id: "expo", name: "Expo", bg: "#000", color: "#fff", logo: "/img/tech/expo.svg" },
+  { id: "tanstack", name: "TanStack Start", bg: "#181818", color: "#FFD814", logo: "/img/tech/tanstack.svg" },
+  { id: "vercel", name: "Vercel", bg: "#000", color: "#fff", logo: "/img/tech/vercel.svg" },
+  { id: "linear", name: "Linear", bg: "#5E6AD2", color: "#fff", logo: "/img/tech/linear.svg" },
+  { id: "claude", name: "Claude", bg: "#D97757", color: "#fff", logo: "/img/tech/claude.svg" },
+  { id: "openai", name: "OpenAI", bg: "#FAFAF9", color: "#0D0D0D", logo: "/img/tech/openai.svg" },
+  { id: "cursor", name: "Cursor", bg: "#000", color: "#fff", logo: "/img/tech/cursor.svg" },
 ]
 
 const availableFullTime = false
@@ -24,9 +28,9 @@ const availableFreelance = false
 
 export default function HomePage() {
   return (
-    <div className="max-w-3xl">
+    <div>
       <h1 className="mb-6 text-4xl font-bold">Hi 👋</h1>
-      <p className="mb-10 leading-relaxed">
+      <p className="mb-10 max-w-3xl leading-relaxed">
         I&apos;m Mitesh Shah and I love to build stuff. I am a startup CTO,
         full stack software engineer, game maker and music composer. I also
         dabble - in coffee, wine, science fiction, writing, food plating +
@@ -56,8 +60,8 @@ export default function HomePage() {
       </section>
 
       <section>
-        <h2 className="mb-4 text-2xl font-semibold">Technologies</h2>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+        <h2 className="mb-4 text-2xl font-semibold">What I build with</h2>
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
           {techStack.map((t) => (
             <ParallaxTile
               key={t.id}

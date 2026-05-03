@@ -8,11 +8,11 @@ export function Navbar() {
       role="navigation"
       aria-label="main-navigation"
     >
-      <div className="container mx-auto flex flex-wrap items-center justify-between gap-4 px-6 py-4">
+      <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-4 px-6 py-4">
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/img/mitesh-320.jpg"
-            alt="Mitesh Shah - Profile Shot"
+            src="/img/mitesh-avatar.png"
+            alt="Mitesh Shah"
             width={48}
             height={48}
             className="rounded-full"
