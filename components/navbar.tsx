@@ -1,6 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
 
+import { ThemeToggle } from "@/components/theme-toggle"
+
 export function Navbar() {
   return (
     <nav
@@ -27,6 +29,7 @@ export function Navbar() {
           <Link href="/projects" className="hover:underline">
             Projects
           </Link>
+          <ThemeToggle />
         </div>
       </div>
     </nav>

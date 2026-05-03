@@ -1,3 +1,5 @@
+import { GithubLogo, LinkedinLogo } from "@phosphor-icons/react/dist/ssr"
+
 export function Footer() {
   return (
     <footer className="border-border mt-16 border-t py-8">
@@ -10,24 +12,18 @@ export function Footer() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
+          className="text-foreground/80 hover:text-foreground transition-colors"
         >
-          <img
-            src="/img/social/linkedin.svg"
-            alt="LinkedIn"
-            className="h-8 w-8"
-          />
+          <LinkedinLogo weight="fill" className="size-7" />
         </a>
         <a
           href="https://github.com/mitesh-mokko"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub"
+          className="text-foreground/80 hover:text-foreground transition-colors"
         >
-          <img
-            src="/img/github-icon.svg"
-            alt="GitHub"
-            className="h-8 w-8"
-          />
+          <GithubLogo weight="fill" className="size-7" />
         </a>
       </div>
     </footer>
