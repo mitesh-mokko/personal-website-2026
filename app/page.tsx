@@ -1,4 +1,3 @@
-import { AvailablePill } from "@/components/available-pill"
 import {
   ObfuscatedEmail,
   ObfuscatedPhone,
@@ -115,28 +114,28 @@ const techStack: Tech[] = [
   },
 ]
 
-const availableFullTime = false
-const availableFreelance = false
-
 export default function HomePage() {
   return (
     <div>
       <h1 className="sr-only">Mitesh Shah</h1>
 
       <section className="mb-14 max-w-3xl space-y-5 leading-relaxed">
+        <h2 className="mb-2 text-2xl font-semibold">Get to know me</h2>
         <p className="text-lg">
-          I played with Legos a lot as a kid. With the right variety of pieces,
-          I could build anything I wanted. When the right pieces didn&apos;t
-          exist, I&apos;d start making them on my own. I&apos;ve been a builder
-          ever since.
+          As a kid, I played with Legos a lot. At first, I built the picture.
+          Then, I built what I could picture. Eventually I wanted to build
+          things that I didn&apos;t have the pieces for. And that&apos;s
+          where it began.{" "}
+          <em>Solve the problem by building your own pieces.</em> I&apos;ve
+          been a builder ever since.
         </p>
         <p>
           I couldn&apos;t afford the Lego motors, so I soldered cheap model
           motors into the housings. I wanted a PlayStation steering wheel, so I
           broke apart a controller and built one out of styrofoam and cardboard
-          with the original circuitry intact. I fixed a VCR. Made games. Made
-          apps. Now I bring bigger ideas to life through startups. And I feel
-          like I&apos;m just getting started.
+          with the original circuitry intact. I fixed a VCR. Wrote songs in
+          Logo beep. Made games. Made apps. Now I bring bigger ideas to life
+          through startups. And I feel like I&apos;m just getting started.
         </p>
         <p>
           Snap together the right pieces, and we can build anything we want —
@@ -147,23 +146,6 @@ export default function HomePage() {
 
       <section className="mb-14 max-w-3xl space-y-5 leading-relaxed">
         <h2 className="mb-2 text-2xl font-semibold">How I work</h2>
-
-        <p>
-          For most of my career, the way I worked looked wrong. Building lean
-          before there was a name for it. Refusing rituals my colleagues were
-          sure were rigor. Keeping teams small while everyone around me argued
-          for more headcount.
-        </p>
-
-        <p>
-          <em>&ldquo;Being early is the same as being wrong&rdquo;</em> — that
-          is a line I know well. You don&apos;t know, in the middle of it,
-          whether you&apos;re seeing something nobody else is yet or just being
-          stubborn about a hill not worth dying on. You keep going. Sometimes
-          the world catches up.
-        </p>
-
-        <p>The principles haven&apos;t changed.</p>
 
         <p className="text-lg font-semibold">
           Small teams. Simple stacks. Surface area you can hold in your head.
@@ -186,10 +168,12 @@ export default function HomePage() {
 
         <p>
           The hardest one to defend in big organizations is the one I&apos;m
-          most right about: <strong>discipline over process.</strong> Process
-          is what you reach for when you don&apos;t trust anyone in the room.
+          most right about: <strong>trust over process.</strong> Process is
+          what you reach for when you don&apos;t trust anyone in the room.
           With the right people, you don&apos;t need much of it. With the
-          wrong people, no amount of it will save you.
+          wrong people, no amount of it will save you. And it&apos;s even
+          easier to trust when the team is shipping actual product instead
+          of closing tickets.
         </p>
       </section>
 
@@ -318,6 +302,9 @@ export default function HomePage() {
           </li>
         </ol>
 
+        <p className="text-muted-foreground mb-6 text-sm font-medium">
+          Some preferred tools and technologies
+        </p>
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 md:grid-cols-3">
           {techStack.map((t) => (
             <div key={t.id} className="space-y-3">
@@ -335,22 +322,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mb-10">
-        <div className="mb-4 flex flex-wrap gap-4">
-          <AvailablePill
-            available={availableFullTime}
-            label={`${availableFullTime ? "Available" : "Currently unavailable"} for full-time remote work`}
-          />
-          <AvailablePill
-            available={availableFreelance}
-            label={`${availableFreelance ? "Available" : "Currently unavailable"} for freelance projects`}
-          />
-        </div>
-        <div className="flex flex-wrap gap-x-8 gap-y-2 text-sm">
-          <span>Connect for work:</span>
-          <ObfuscatedEmail className="hover:underline" />
-          <ObfuscatedPhone className="hover:underline" prefix="text: " />
-        </div>
+      <section className="mb-10 flex flex-wrap gap-x-8 gap-y-2 text-sm">
+        <span>Want to chat more?</span>
+        <ObfuscatedEmail className="hover:underline" />
+        <ObfuscatedPhone className="hover:underline" prefix="text: " />
       </section>
     </div>
   )
