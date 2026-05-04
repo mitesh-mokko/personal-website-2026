@@ -3,6 +3,7 @@ import {
   ObfuscatedPhone,
 } from "@/components/obfuscated-contact"
 import { ParallaxTile } from "@/components/parallax-tile"
+import { PullQuote } from "@/components/pull-quote"
 
 type Tech = {
   id: string
@@ -119,29 +120,34 @@ export default function HomePage() {
     <div>
       <h1 className="sr-only">Mitesh Shah</h1>
 
-      <section className="mb-14 max-w-3xl space-y-5 leading-relaxed">
-        <h2 className="mb-2 text-2xl font-semibold">Get to know me</h2>
+      <section className="mb-14 max-w-3xl leading-relaxed">
+        <h2 className="mb-5 text-2xl font-semibold">Get to know me</h2>
+
         <p className="text-lg">
           As a kid, I played with Legos a lot. At first, I built the picture.
           Then, I built what I could picture. Eventually I wanted to build
           things that I didn&apos;t have the pieces for. And that&apos;s
-          where it began.{" "}
-          <em>Solve the problem by building your own pieces.</em> I&apos;ve
-          been a builder ever since.
+          where it began.
         </p>
-        <p>
-          I couldn&apos;t afford the Lego motors, so I soldered cheap model
-          motors into the housings. I wanted a PlayStation steering wheel, so I
-          broke apart a controller and built one out of styrofoam and cardboard
-          with the original circuitry intact. I fixed a VCR. Wrote songs in
-          Logo beep. Made games. Made apps. Now I bring bigger ideas to life
-          through startups. And I feel like I&apos;m just getting started.
-        </p>
-        <p>
-          Snap together the right pieces, and we can build anything we want —
-          the right teams, the right software, the right products, and even the
-          right robots.
-        </p>
+
+        <PullQuote>Solve the problem by building your own pieces.</PullQuote>
+
+        <div className="space-y-5">
+          <p>
+            I&apos;ve been a builder ever since. I couldn&apos;t afford the
+            Lego motors, so I soldered cheap model motors into the housings.
+            I wanted a PlayStation steering wheel, so I broke apart a
+            controller and built one out of styrofoam and cardboard with the
+            original circuitry intact. I fixed a VCR. Wrote songs in Logo
+            beep. Made games. Made apps. Now I bring bigger ideas to life
+            through startups. And I feel like I&apos;m just getting started.
+          </p>
+          <p>
+            Snap together the right pieces, and we can build anything we
+            want — the right teams, the right software, the right products,
+            and even the right robots.
+          </p>
+        </div>
       </section>
 
       <section className="mb-14 max-w-3xl space-y-5 leading-relaxed">
@@ -177,8 +183,8 @@ export default function HomePage() {
         </p>
       </section>
 
-      <section className="mb-14 max-w-3xl space-y-5 leading-relaxed">
-        <h2 className="mb-2 text-2xl font-semibold">Why it works</h2>
+      <section className="mb-14 max-w-3xl leading-relaxed">
+        <h2 className="mb-5 text-2xl font-semibold">Why it works</h2>
 
         <p>
           Big teams have a quiet failure mode. Coordination scales
@@ -186,18 +192,20 @@ export default function HomePage() {
           looks busy and productive. The organization atrophies.
         </p>
 
-        <p>
+        <PullQuote>
           A small group with the right stack will outpace a committee of
           forty. Almost always.
-        </p>
+        </PullQuote>
 
-        <p>
-          In the AI era, this is even more true. The bottleneck isn&apos;t
-          building speed. It&apos;s decision quality. And decision quality
-          lives in small groups thinking clearly together.
-        </p>
+        <div className="space-y-5">
+          <p>
+            In the AI era, this is even more true. The bottleneck isn&apos;t
+            building speed. It&apos;s decision quality. And decision quality
+            lives in small groups thinking clearly together.
+          </p>
 
-        <p>That&apos;s the whole game.</p>
+          <p>That&apos;s the whole game.</p>
+        </div>
       </section>
 
       <section className="mb-14">
