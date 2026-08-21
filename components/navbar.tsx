@@ -1,12 +1,13 @@
 import Image from "next/image"
 import Link from "next/link"
 
+import { IdeasMenu } from "@/components/ideas-menu"
 import { ThemeToggle } from "@/components/theme-toggle"
 
 export function Navbar() {
   return (
     <nav
-      className="border-border border-b"
+      className="border-b border-border"
       role="navigation"
       aria-label="main-navigation"
     >
@@ -29,6 +30,7 @@ export function Navbar() {
           <Link href="/projects" className="hover:underline">
             Projects
           </Link>
+          <IdeasMenu />
           <ThemeToggle />
         </div>
       </div>
