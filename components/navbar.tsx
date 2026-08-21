@@ -7,7 +7,7 @@ import { ThemeToggle } from "@/components/theme-toggle"
 export function Navbar() {
   return (
     <nav
-      className="border-b border-border"
+      className="sticky top-0 z-50 border-b border-border bg-card/75 backdrop-blur-md"
       role="navigation"
       aria-label="main-navigation"
     >
