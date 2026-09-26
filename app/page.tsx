@@ -105,31 +105,22 @@ const techStack: Tech[] = [
       "When there’s a team, keep projects, backlogs, and ownership visible so people can coordinate without turning every decision into a meeting.",
   },
   {
-    id: "claude",
-    name: "Claude",
-    bg: "#D97757",
+    id: "slack",
+    name: "Slack",
+    bg: "#4A154B",
     color: "#fff",
-    logo: "/img/tech/claude.svg",
+    mark: "sl",
     reason:
-      "A partner for drafting, reviewing code, and working through problems that are still fuzzy.",
+      "The team’s communication backbone. Channels and threads keep questions, decisions, and updates moving while Linear keeps the work visible.",
   },
   {
-    id: "openai",
-    name: "OpenAI",
-    bg: "#FAFAF9",
-    color: "#0D0D0D",
-    logo: "/img/tech/openai.svg",
-    reason:
-      "Another perspective on code, writing, and product decisions. Pick the model that fits the task.",
-  },
-  {
-    id: "cursor",
-    name: "Cursor",
-    bg: "#000",
+    id: "ai-trinity",
+    name: "Claude + OpenAI + Cursor",
+    bg: "#171717",
     color: "#fff",
-    logo: "/img/tech/cursor.svg",
+    mark: "AI",
     reason:
-      "Code and AI assistance in the same workspace make quick iterations easier to follow.",
+      "One extremely useful workhorse for thinking, writing, coding, and review. Claude and OpenAI bring different strengths; Cursor keeps that help close to the work.",
   },
 ]
 
@@ -406,8 +397,8 @@ export default function HomePage() {
             <p className="leading-relaxed text-muted-foreground">
               One language across the product where it helps. Services that take
               work off a small team. Tools to measure what happens, coordinate
-              when there&apos;s a team, and think with AI. Here are some current
-              favorites and why they earn a place.
+              and communicate when there&apos;s a team, and think with AI. Here
+              are some current favorites and why they earn a place.
             </p>
           </div>
           <table className="w-full border-collapse border-y border-border text-left">
