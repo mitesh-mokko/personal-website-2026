@@ -48,6 +48,22 @@ export function IdeasMenu() {
       {open ? (
         <div className="ideas-menu-panel" role="menu">
           <Link
+            href="/idea-loop"
+            role="menuitem"
+            className="ideas-menu-item"
+            onClick={() => setOpen(false)}
+          >
+            <span>
+              <span className="ideas-menu-item-title">Product IDEA Loop</span>
+              <span className="ideas-menu-item-description">
+                Build, learn, decide. Repeat.
+              </span>
+            </span>
+            <span aria-hidden="true" className="ideas-menu-arrow">
+              ↗
+            </span>
+          </Link>
+          <Link
             href="/fsd-hints"
             role="menuitem"
             className="ideas-menu-item"

@@ -2,6 +2,7 @@ import {
   ObfuscatedEmail,
   ObfuscatedPhone,
 } from "@/components/obfuscated-contact"
+import Link from "next/link"
 import { ParallaxTile } from "@/components/parallax-tile"
 import { PullQuote } from "@/components/pull-quote"
 
@@ -206,6 +207,24 @@ export default function HomePage() {
 
           <p>That&apos;s the whole game.</p>
         </div>
+      </section>
+
+      <section className="mb-14 max-w-3xl border-y border-border py-8 leading-relaxed">
+        <p className="mb-3 text-sm font-semibold text-muted-foreground">
+          An idea I keep coming back to
+        </p>
+        <h2 className="mb-4 text-2xl font-semibold">Product IDEA Loop</h2>
+        <p>
+          Insight, Design, Engineering, and Analysis in the same working
+          session. Build something concrete, learn from it, and decide what
+          happens next. The goal is better decisions with every loop.
+        </p>
+        <Link
+          href="/idea-loop"
+          className="mt-5 inline-block font-semibold underline underline-offset-4 hover:opacity-70 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
+        >
+          Explore the IDEA Loop
+        </Link>
       </section>
 
       <section className="mb-14">
