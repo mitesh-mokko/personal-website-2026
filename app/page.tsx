@@ -9,10 +9,20 @@ type Tech = {
   bg: string
   color?: string
   logo?: string
+  mark?: string
   reason: string
 }
 
 const techStack: Tech[] = [
+  {
+    id: "shadcn",
+    name: "shadcn/ui",
+    bg: "#171717",
+    color: "#fff",
+    mark: "sh",
+    reason:
+      "Beautiful, accessible components whose source lives in the app. The defaults get us moving; owning the code lets the interface become ours.",
+  },
   {
     id: "next",
     name: "Next.js",
@@ -37,7 +47,8 @@ const techStack: Tech[] = [
     bg: "#38BDF8",
     color: "#0F172A",
     logo: "/img/tech/tailwind.svg",
-    reason: "Stop naming things. Style where you write the markup.",
+    reason:
+      "The styling layer underneath. Fast to shape the details without maintaining a separate CSS naming system.",
   },
   {
     id: "supabase",
@@ -420,7 +431,7 @@ export default function HomePage() {
                         style={{ backgroundColor: t.bg, color: t.color }}
                         aria-hidden="true"
                       >
-                        {t.logo && (
+                        {t.logo ? (
                           <Image
                             src={t.logo}
                             alt=""
@@ -429,6 +440,10 @@ export default function HomePage() {
                             className="max-h-6 max-w-6 object-contain"
                             unoptimized={t.logo.endsWith(".svg")}
                           />
+                        ) : (
+                          <span className="font-mono text-sm font-semibold tracking-tight">
+                            {t.mark}
+                          </span>
                         )}
                       </span>
                       {t.name}
