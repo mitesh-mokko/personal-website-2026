@@ -9,7 +9,8 @@ type Tech = {
   bg: string
   color?: string
   logo?: string
-  mark?: string
+  logoWidth?: number
+  logos?: { logo: string; bg: string }[]
   reason: string
 }
 
@@ -19,7 +20,7 @@ const techStack: Tech[] = [
     name: "shadcn/ui",
     bg: "#171717",
     color: "#fff",
-    mark: "sh",
+    logo: "/img/tech/shadcn.svg",
     reason:
       "Beautiful, accessible components whose source lives in the app. The defaults get us moving; owning the code lets the interface become ours.",
   },
@@ -71,8 +72,7 @@ const techStack: Tech[] = [
   {
     id: "tanstack",
     name: "TanStack Start",
-    bg: "#181818",
-    color: "#FFD814",
+    bg: "#111111",
     logo: "/img/tech/tanstack.svg",
     reason:
       "Type-safe full-stack with sharper routing. The right call when Next isn't.",
@@ -89,9 +89,9 @@ const techStack: Tech[] = [
   {
     id: "posthog",
     name: "PostHog",
-    bg: "#F54E00",
-    color: "#fff",
-    mark: "ph",
+    bg: "#fff",
+    logo: "/img/tech/posthog.svg",
+    logoWidth: 28,
     reason:
       "Product analytics and experiments in one place. Measure what people actually do, test changes, and feed the next product decision.",
   },
@@ -107,20 +107,22 @@ const techStack: Tech[] = [
   {
     id: "slack",
     name: "Slack",
-    bg: "#4A154B",
-    color: "#fff",
-    mark: "sl",
+    bg: "#fff",
+    logo: "/img/tech/slack.svg",
     reason:
       "The team’s communication backbone. Channels and threads keep questions, decisions, and updates moving while Linear keeps the work visible.",
   },
   {
     id: "ai-trinity",
-    name: "Claude + OpenAI + Cursor",
+    name: "AI trinity",
     bg: "#171717",
-    color: "#fff",
-    mark: "AI",
+    logos: [
+      { logo: "/img/tech/claude.svg", bg: "#D97757" },
+      { logo: "/img/tech/openai.svg", bg: "#FAFAF9" },
+      { logo: "/img/tech/cursor.svg", bg: "#000" },
+    ],
     reason:
-      "One extremely useful workhorse for thinking, writing, coding, and review. Claude and OpenAI bring different strengths; Cursor keeps that help close to the work.",
+      "Claude, OpenAI, and Cursor together: one extremely useful workhorse for thinking, writing, coding, and review. Different models bring different strengths; Cursor keeps that help close to the work.",
   },
 ]
 
@@ -426,26 +428,40 @@ export default function HomePage() {
                     className="block text-left align-top font-semibold md:table-cell md:py-5 md:pr-8"
                   >
                     <span className="flex items-center gap-3">
-                      <span
-                        className="flex size-10 shrink-0 items-center justify-center rounded-md"
-                        style={{ backgroundColor: t.bg, color: t.color }}
-                        aria-hidden="true"
-                      >
-                        {t.logo ? (
+                      {t.logos ? (
+                        <span className="flex shrink-0 items-center gap-1" aria-hidden="true">
+                          {t.logos.map((item) => (
+                            <span
+                              key={item.logo}
+                              className="flex size-8 items-center justify-center rounded-md"
+                              style={{ backgroundColor: item.bg }}
+                            >
+                              <Image
+                                src={item.logo}
+                                alt=""
+                                width={19}
+                                height={19}
+                                unoptimized
+                              />
+                            </span>
+                          ))}
+                        </span>
+                      ) : (
+                        <span
+                          className="flex size-10 shrink-0 items-center justify-center rounded-md"
+                          style={{ backgroundColor: t.bg, color: t.color }}
+                          aria-hidden="true"
+                        >
                           <Image
-                            src={t.logo}
+                            src={t.logo!}
                             alt=""
-                            width={24}
+                            width={t.logoWidth ?? 24}
                             height={24}
-                            className="max-h-6 max-w-6 object-contain"
-                            unoptimized={t.logo.endsWith(".svg")}
+                            className="max-h-6 max-w-7 object-contain"
+                            unoptimized
                           />
-                        ) : (
-                          <span className="font-mono text-sm font-semibold tracking-tight">
-                            {t.mark}
-                          </span>
-                        )}
-                      </span>
+                        </span>
+                      )}
                       {t.name}
                     </span>
                   </th>
