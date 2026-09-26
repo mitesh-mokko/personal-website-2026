@@ -1,7 +1,4 @@
-import {
-  ObfuscatedEmail,
-  ObfuscatedPhone,
-} from "@/components/obfuscated-contact"
+import { ContactActions } from "@/components/obfuscated-contact"
 import Link from "next/link"
 import { ParallaxTile } from "@/components/parallax-tile"
 import { PullQuote } from "@/components/pull-quote"
@@ -362,10 +359,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section-prose mb-10 flex flex-wrap gap-x-8 gap-y-2 text-sm">
-        <span>Want to chat more?</span>
-        <ObfuscatedEmail className="hover:underline" />
-        <ObfuscatedPhone className="hover:underline" prefix="text: " />
+      <section className="section-prose mb-10 border-t border-border pt-10">
+        <h2 className="type-section-title">Have something to build?</h2>
+        <p className="mt-3 max-w-xl text-muted-foreground">
+          A few lines about the product, the team, or the hard part are plenty.
+        </p>
+        <ContactActions />
       </section>
     </div>
   )
