@@ -338,8 +338,9 @@ export default function HomePage() {
                   </p>
                   <p>
                     Need a native Swift app? Cutting-edge Apple SDKs?
-                    Platform-grade transitions? First we answer why. By Series
-                    B, the native team is affordable.
+                    Platform-grade transitions? First we answer why. If the
+                    product needs it, a small team can go native with AI instead
+                    of treating it as a new hiring plan.
                   </p>
                 </div>
               </li>
