@@ -113,8 +113,8 @@ const techStack: Tech[] = [
       "The team’s communication backbone. Channels and threads keep questions, decisions, and updates moving while Linear keeps the work visible.",
   },
   {
-    id: "ai-trinity",
-    name: "AI trinity",
+    id: "frontier-ai",
+    name: "Frontier AI",
     bg: "#171717",
     logos: [
       { logo: "/img/tech/claude.svg", bg: "#D97757" },
