@@ -231,131 +231,174 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section-prose mb-14">
-        <div className="mb-12">
-          <div>
-            <h2 className="type-section-title mb-3">The operating system</h2>
-            <p className="leading-relaxed text-muted-foreground">
-              Generally true. Not universal. Each product and startup makes its
-              own intentional choices.
-            </p>
-          </div>
-
-          <ol className="mt-8 list-none space-y-8">
-            <li className="flex gap-6">
-              <span className="w-8 shrink-0 pt-1 font-mono text-sm text-muted-foreground">
-                00
-              </span>
-              <div className="flex-1 space-y-2 leading-relaxed">
-                <p className="font-semibold">AI-first from here on out.</p>
-                <p>Think with AI. Do with AI. Build with AI.</p>
-              </div>
-            </li>
-            <li className="flex gap-6">
-              <span className="w-8 shrink-0 pt-1 font-mono text-sm text-muted-foreground">
-                01
-              </span>
-              <div className="flex-1 space-y-2 leading-relaxed">
-                <p className="font-semibold">Sketch it out.</p>
-                <p>
-                  Build a prototype with AI in v0 or Replit instead of a doc or
-                  slide deck. It answers questions up front. Kills bad ideas
-                  earlier. Strengthens great ones until your teammates are
-                  thrilled to build them.
-                </p>
-              </div>
-            </li>
-            <li className="flex gap-6">
-              <span className="w-8 shrink-0 pt-1 font-mono text-sm text-muted-foreground">
-                02
-              </span>
-              <div className="flex-1 space-y-2 leading-relaxed">
-                <p className="font-semibold">
-                  TypeScript / JavaScript everywhere.
-                </p>
-                <p>
-                  Frontend, backend, even native. Seamless prototyping. Code
-                  reuse across boundaries.
-                </p>
-              </div>
-            </li>
-            <li className="flex gap-6">
-              <span className="w-8 shrink-0 pt-1 font-mono text-sm text-muted-foreground">
-                03
-              </span>
-              <div className="flex-1 space-y-2 leading-relaxed">
-                <p className="font-semibold">Intentional frugality.</p>
-                <p>
-                  Not chasing token leaderboards. Not opening 10 agent windows
-                  at once. Not hiring 5 engineers at once.
-                </p>
-              </div>
-            </li>
-            <li className="flex gap-6">
-              <span className="w-8 shrink-0 pt-1 font-mono text-sm text-muted-foreground">
-                04
-              </span>
-              <div className="flex-1 space-y-2 leading-relaxed">
-                <p className="font-semibold">
-                  Assume rewrites are cheap when needed.
-                </p>
-                <p>
-                  Need a native Swift app? Cutting-edge Apple SDKs?
-                  Platform-grade transitions? First we answer why. By Series B,
-                  the native team is affordable.
-                </p>
-              </div>
-            </li>
-            <li className="flex gap-6">
-              <span className="w-8 shrink-0 pt-1 font-mono text-sm text-muted-foreground">
-                05
-              </span>
-              <div className="flex-1 space-y-2 leading-relaxed">
-                <p className="font-semibold">
-                  5 people × 10 hours ≠ 10 people × 5 hours.
-                </p>
-                <p>
-                  Same person-hours on paper. One ships. The other ships
-                  nothing.
-                </p>
-              </div>
-            </li>
-            <li className="flex gap-6">
-              <span className="w-8 shrink-0 pt-1 font-mono text-sm text-muted-foreground">
-                06
-              </span>
-              <div className="flex-1 space-y-2 leading-relaxed">
-                <p className="font-semibold">Less ceremony.</p>
-                <p>
-                  Minimize recurring meetings. Match &ldquo;talk about
-                  work&rdquo; with at least as much &ldquo;do the work.&rdquo;
-                  Agile and Scrum? While you&apos;re at it, throw the whole
-                  thing out.
-                </p>
-              </div>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <section className="section-wide mb-14">
-        <p className="mb-6 text-sm font-medium text-muted-foreground">
-          Some preferred tools and technologies
-        </p>
-        <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 md:grid-cols-3">
-          {techStack.map((t) => (
-            <div key={t.id} className="space-y-3">
-              <ParallaxTile
-                label={t.name}
-                color={t.color}
-                bg={t.bg}
-                logo={t.logo}
-              />
-              <p className="text-sm leading-relaxed text-muted-foreground">
-                {t.reason}
+      <section className="mb-14" aria-labelledby="me-stack-title">
+        <div className="section-prose">
+          <div className="mb-12">
+            <div>
+              <h2
+                id="me-stack-title"
+                className="type-section-title mb-3 scroll-mt-28"
+              >
+                The Me Stack
+              </h2>
+              <p className="leading-relaxed text-muted-foreground">
+                Technology, product decisions, and team coordination belong in
+                the same stack. Together they determine what a small group can
+                actually ship. The name is a nod to{" "}
+                <a
+                  href="https://github.com/garrytan/gstack"
+                  className="underline underline-offset-4 hover:opacity-70 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
+                >
+                  G Stack
+                </a>{" "}
+                and{" "}
+                <a
+                  href="https://github.com/cursor/plugins/tree/main/pstack"
+                  className="underline underline-offset-4 hover:opacity-70 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
+                >
+                  P Stack
+                </a>
+                . Mine keeps the whole product understandable, leaves room for
+                judgment, and checks the thing that actually runs. These are
+                defaults, not doctrine. Each product earns its own choices.
               </p>
             </div>
-          ))}
+
+            <ol className="mt-8 list-none space-y-8">
+              <li className="flex gap-6">
+                <span className="w-8 shrink-0 pt-1 font-mono text-sm text-muted-foreground">
+                  00
+                </span>
+                <div className="flex-1 space-y-2 leading-relaxed">
+                  <p className="font-semibold">AI-first from here on out.</p>
+                  <p>Think with AI. Do with AI. Build with AI.</p>
+                </div>
+              </li>
+              <li className="flex gap-6">
+                <span className="w-8 shrink-0 pt-1 font-mono text-sm text-muted-foreground">
+                  01
+                </span>
+                <div className="flex-1 space-y-2 leading-relaxed">
+                  <p className="font-semibold">Sketch it out.</p>
+                  <p>
+                    Build a prototype with AI in v0 or Replit instead of a doc
+                    or slide deck. It answers questions up front. Kills bad
+                    ideas earlier. Strengthens great ones until your teammates
+                    are thrilled to build them.
+                  </p>
+                </div>
+              </li>
+              <li className="flex gap-6">
+                <span className="w-8 shrink-0 pt-1 font-mono text-sm text-muted-foreground">
+                  02
+                </span>
+                <div className="flex-1 space-y-2 leading-relaxed">
+                  <p className="font-semibold">
+                    TypeScript / JavaScript everywhere.
+                  </p>
+                  <p>
+                    Frontend, backend, even native. Seamless prototyping. Code
+                    reuse across boundaries.
+                  </p>
+                </div>
+              </li>
+              <li className="flex gap-6">
+                <span className="w-8 shrink-0 pt-1 font-mono text-sm text-muted-foreground">
+                  03
+                </span>
+                <div className="flex-1 space-y-2 leading-relaxed">
+                  <p className="font-semibold">Intentional frugality.</p>
+                  <p>
+                    Not chasing token leaderboards. Not opening 10 agent windows
+                    at once. Not hiring 5 engineers at once.
+                  </p>
+                </div>
+              </li>
+              <li className="flex gap-6">
+                <span className="w-8 shrink-0 pt-1 font-mono text-sm text-muted-foreground">
+                  04
+                </span>
+                <div className="flex-1 space-y-2 leading-relaxed">
+                  <p className="font-semibold">
+                    Assume rewrites are cheap when needed.
+                  </p>
+                  <p>
+                    Need a native Swift app? Cutting-edge Apple SDKs?
+                    Platform-grade transitions? First we answer why. By Series
+                    B, the native team is affordable.
+                  </p>
+                </div>
+              </li>
+              <li className="flex gap-6">
+                <span className="w-8 shrink-0 pt-1 font-mono text-sm text-muted-foreground">
+                  05
+                </span>
+                <div className="flex-1 space-y-2 leading-relaxed">
+                  <p className="font-semibold">
+                    Keep the team small enough to decide.
+                  </p>
+                  <p>
+                    5 people × 10 hours ≠ 10 people × 5 hours. The math misses
+                    the handoffs, lost context, and time spent getting everyone
+                    aligned. Fewer people can mean more room to make the thing.
+                  </p>
+                </div>
+              </li>
+              <li className="flex gap-6">
+                <span className="w-8 shrink-0 pt-1 font-mono text-sm text-muted-foreground">
+                  06
+                </span>
+                <div className="flex-1 space-y-2 leading-relaxed">
+                  <p className="font-semibold">Coordinate around decisions.</p>
+                  <p>
+                    Trust the people doing the work. Talk when it changes a
+                    decision, write down what matters, then get back to making.
+                    Keep recurring meetings only when they earn the time.
+                  </p>
+                </div>
+              </li>
+              <li className="flex gap-6">
+                <span className="w-8 shrink-0 pt-1 font-mono text-sm text-muted-foreground">
+                  07
+                </span>
+                <div className="flex-1 space-y-2 leading-relaxed">
+                  <p className="font-semibold">Prove it in the product.</p>
+                  <p>
+                    Read the code, then run the flow. Check the actual response,
+                    the saved data, and what the person sees. A green test is a
+                    clue; working software is the evidence.
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div className="section-wide">
+          <div className="mb-6 max-w-2xl">
+            <h3 className="type-section-title mb-3">Technology choices</h3>
+            <p className="leading-relaxed text-muted-foreground">
+              One language across the product where it helps. Services that take
+              work off a small team. AI tools for thinking and making, with a
+              person still responsible for the call. Here are some current
+              favorites and why they earn a place.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 md:grid-cols-3">
+            {techStack.map((t) => (
+              <div key={t.id} className="space-y-3">
+                <ParallaxTile
+                  label={t.name}
+                  color={t.color}
+                  bg={t.bg}
+                  logo={t.logo}
+                />
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  {t.reason}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
