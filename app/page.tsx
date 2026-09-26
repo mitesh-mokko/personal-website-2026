@@ -1,6 +1,6 @@
 import { ContactActions } from "@/components/obfuscated-contact"
+import Image from "next/image"
 import Link from "next/link"
-import { ParallaxTile } from "@/components/parallax-tile"
 import { PullQuote } from "@/components/pull-quote"
 
 type Tech = {
@@ -72,7 +72,8 @@ const techStack: Tech[] = [
     bg: "#000",
     color: "#fff",
     logo: "/img/tech/vercel.svg",
-    reason: "git push is the deploy. The infrastructure layer that disappears.",
+    reason:
+      "A branch becomes a working preview. Feedback can happen on the product before anything goes live.",
   },
   {
     id: "linear",
@@ -81,7 +82,7 @@ const techStack: Tech[] = [
     color: "#fff",
     logo: "/img/tech/linear.svg",
     reason:
-      "The project tool that respects your time. Built for shipping, not ticket archaeology.",
+      "Keeps priorities and decisions visible without making the team perform process for its own sake.",
   },
   {
     id: "claude",
@@ -90,7 +91,7 @@ const techStack: Tech[] = [
     color: "#fff",
     logo: "/img/tech/claude.svg",
     reason:
-      "The thoughtful AI. Pair-programmer for code and prose, with judgment to spare.",
+      "A partner for drafting, reviewing code, and working through problems that are still fuzzy.",
   },
   {
     id: "openai",
@@ -99,7 +100,7 @@ const techStack: Tech[] = [
     color: "#0D0D0D",
     logo: "/img/tech/openai.svg",
     reason:
-      "The other half of the modern AI toolbox. Reach for them where their strengths line up.",
+      "Another perspective on code, writing, and product decisions. Pick the model that fits the task.",
   },
   {
     id: "cursor",
@@ -108,7 +109,7 @@ const techStack: Tech[] = [
     color: "#fff",
     logo: "/img/tech/cursor.svg",
     reason:
-      "An AI-first IDE. The whole thing was designed around it, not retrofitted to fit it in.",
+      "Code and AI assistance in the same workspace make quick iterations easier to follow.",
   },
 ]
 
@@ -374,9 +375,14 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="section-wide">
+        <div className="section-wide max-w-4xl">
           <div className="mb-6 max-w-2xl">
-            <h3 className="type-section-title mb-3">Technology choices</h3>
+            <h3
+              id="technology-choices"
+              className="type-section-title mb-3 scroll-mt-28"
+            >
+              Technology choices
+            </h3>
             <p className="leading-relaxed text-muted-foreground">
               One language across the product where it helps. Services that take
               work off a small team. AI tools for thinking and making, with a
@@ -384,21 +390,57 @@ export default function HomePage() {
               favorites and why they earn a place.
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 md:grid-cols-3">
-            {techStack.map((t) => (
-              <div key={t.id} className="space-y-3">
-                <ParallaxTile
-                  label={t.name}
-                  color={t.color}
-                  bg={t.bg}
-                  logo={t.logo}
-                />
-                <p className="text-sm leading-relaxed text-muted-foreground">
-                  {t.reason}
-                </p>
-              </div>
-            ))}
-          </div>
+          <table className="w-full border-collapse border-y border-border text-left">
+            <caption className="sr-only">
+              Technology choices and why each earns a place
+            </caption>
+            <thead className="hidden md:table-header-group">
+              <tr className="border-b border-border text-sm text-muted-foreground">
+                <th scope="col" className="w-64 py-4 pr-8 font-medium">
+                  Choice
+                </th>
+                <th scope="col" className="py-4 font-medium">
+                  Why it earns a place
+                </th>
+              </tr>
+            </thead>
+            <tbody className="block md:table-row-group">
+              {techStack.map((t) => (
+                <tr
+                  key={t.id}
+                  className="block border-b border-border py-5 last:border-b-0 md:table-row md:py-0"
+                >
+                  <th
+                    scope="row"
+                    className="block text-left align-top font-semibold md:table-cell md:py-5 md:pr-8"
+                  >
+                    <span className="flex items-center gap-3">
+                      <span
+                        className="flex size-10 shrink-0 items-center justify-center rounded-md"
+                        style={{ backgroundColor: t.bg, color: t.color }}
+                        aria-hidden="true"
+                      >
+                        {t.logo && (
+                          <Image
+                            src={t.logo}
+                            alt=""
+                            width={24}
+                            height={24}
+                            className="max-h-6 max-w-6 object-contain"
+                            unoptimized={t.logo.endsWith(".svg")}
+                          />
+                        )}
+                      </span>
+                      {t.name}
+                    </span>
+                  </th>
+                  <td className="block pt-2 leading-relaxed text-muted-foreground md:table-cell md:py-5 md:align-top">
+                    {t.reason}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </section>
 
