@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { useRef, type ReactNode } from "react"
 import {
   motion,
@@ -11,6 +12,7 @@ import {
 type ParallaxTileProps = {
   label: string
   logo?: string
+  project?: boolean
   bg?: string
   color?: string
   children?: ReactNode
@@ -27,6 +29,7 @@ const springValues: SpringOptions = {
 export function ParallaxTile({
   label,
   logo,
+  project = false,
   bg = "#48e",
   color = "white",
   children,
@@ -75,14 +78,46 @@ export function ParallaxTile({
           scale,
         }}
       >
-        <div
-          className="pointer-events-none flex flex-col items-center text-center antialiased"
-          style={{ transform: "translateZ(30px)" }}
-        >
-          {logo && <img src={logo} alt="" className="h-10" />}
-          {label}
-          {children}
-        </div>
+        {project ? (
+          <>
+            {logo && (
+              <div
+                className="pointer-events-none relative h-20 w-full max-w-60 sm:h-24"
+                style={{ transform: "translateZ(30px)" }}
+              >
+                <Image
+                  src={logo}
+                  alt=""
+                  fill
+                  sizes="(max-width: 640px) 240px, 240px"
+                  className="object-contain"
+                  unoptimized={logo.endsWith(".svg")}
+                />
+              </div>
+            )}
+            <span className="pointer-events-none absolute bottom-5 left-6 text-left text-xs font-semibold tracking-wide">
+              {label}
+            </span>
+          </>
+        ) : (
+          <div
+            className="pointer-events-none flex flex-col items-center text-center antialiased"
+            style={{ transform: "translateZ(30px)" }}
+          >
+            {logo && (
+              <Image
+                src={logo}
+                alt=""
+                width={40}
+                height={40}
+                className="h-10 w-auto"
+                unoptimized={logo.endsWith(".svg")}
+              />
+            )}
+            {label}
+            {children}
+          </div>
+        )}
       </motion.div>
     </div>
   )

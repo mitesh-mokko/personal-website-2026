@@ -6,47 +6,73 @@ type Project = {
   link: string
   bg: string
   color?: string
+  logo: string
+  context: string
   summary: string
 }
 
 const projects: Project[] = [
   {
-    id: "personify",
-    name: "Personify",
-    link: "https://personifyhq.com",
-    bg: "#ca9052",
-    summary:
-      "Product discovery tool. User stories, personas, and journey maps share one narrative spine instead of living in three disconnected docs.",
-  },
-  {
     id: "codapet",
     name: "CodaPet",
     link: "https://www.codapet.com",
-    bg: "#527cac",
+    bg: "#e9f1f5",
+    color: "#3f5675",
+    logo: "/img/projects/codapet.svg",
+    context: "Head of Engineering · Full-time",
     summary:
-      "In-home end-of-life care for pets. A network of licensed vets across 30+ metros, so the goodbye happens at home, not in a clinic.",
+      "I joined as founding engineer and now lead engineering. CodaPet brings licensed vets into homes across 30+ metros — the most successful startup of my career.",
+  },
+  {
+    id: "exchange",
+    name: "Route Exchange",
+    link: "https://exchange.getroute.com",
+    bg: "#171717",
+    logo: "/img/projects/exchange.png",
+    context: "Founding engineer · Current client",
+    summary:
+      "Route's subcontractor marketplace. Primes find vetted subs, subs surface for matched work, the paperwork lives in one place.",
+  },
+  {
+    id: "scroodles",
+    name: "Scroodles",
+    link: "https://apps.apple.com/us/app/scroodles/id912236766",
+    bg: "#ffe5eb",
+    color: "#36212b",
+    logo: "/img/projects/scroodles.webp",
+    context: "Partner · Coming back online",
+    summary:
+      "iOS word game. Form words from tiles to battle the Scroodles across 180+ levels.",
+  },
+  {
+    id: "personify",
+    name: "Personify",
+    link: "https://personifyhq.com",
+    bg: "#f2eee7",
+    color: "#000f37",
+    logo: "/img/projects/personify.svg",
+    context: "Co-founder",
+    summary:
+      "Product discovery tool. User stories, personas, and journey maps share one narrative spine instead of living in three disconnected docs.",
   },
   {
     id: "route",
     name: "Route",
     link: "https://getroute.com",
     bg: "#000000",
+    logo: "/img/projects/route.png",
+    context: "Co-founder · Exited",
     summary:
       "B2B platform for the commercial cleaning industry. Subcontractor marketplace, mobile proposals, peer forum — three products under one brand.",
-  },
-  {
-    id: "exchange",
-    name: "Route Exchange",
-    link: "https://exchange.getroute.com",
-    bg: "#0081CC",
-    summary:
-      "Route's subcontractor marketplace. Primes find vetted subs, subs surface for matched work, the paperwork lives in one place.",
   },
   {
     id: "alogent-adl",
     name: "Alogent Design Language",
     link: "https://alogent-design-language.netlify.app",
-    bg: "#18b422",
+    bg: "#eaf0ff",
+    color: "#202020",
+    logo: "/img/projects/alogent.png",
+    context: "Former client",
     summary:
       "React design system for a banking software suite. Tokens, components, and the patterns the product teams build on top of.",
   },
@@ -54,25 +80,12 @@ const projects: Project[] = [
     id: "alogent-nxt",
     name: "Alogent NXT Scout",
     link: "https://nxt-scout.netlify.app",
-    bg: "#0e7a18",
+    bg: "#e7f1e4",
+    color: "#202020",
+    logo: "/img/projects/alogent.png",
+    context: "Former client",
     summary:
       "Next-generation banking demo built on the design language above. The system in motion, end to end.",
-  },
-  {
-    id: "sqrl",
-    name: "SQRL",
-    link: "https://sqrl.me",
-    bg: "#9013fe",
-    summary:
-      "Wellness app that auto-saves money based on what your body did that day. Steps, gratitude, and a transfer to your savings account every week.",
-  },
-  {
-    id: "scroodles",
-    name: "Scroodles",
-    link: "https://apps.apple.com/us/app/scroodles/id912236766",
-    bg: "#fe87a8",
-    summary:
-      "iOS word game. Form words from tiles to battle the Scroodles across 180+ levels.",
   },
 ]
 
@@ -99,13 +112,20 @@ export default function ProjectsPage() {
             >
               <ParallaxTile
                 label={project.name}
+                logo={project.logo}
+                project
                 bg={project.bg}
                 color={project.color}
               />
             </a>
-            <p className="text-sm leading-relaxed text-muted-foreground">
-              {project.summary}
-            </p>
+            <div className="space-y-1.5">
+              <p className="text-xs font-semibold tracking-wide text-foreground">
+                {project.context}
+              </p>
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                {project.summary}
+              </p>
+            </div>
           </div>
         ))}
       </section>
