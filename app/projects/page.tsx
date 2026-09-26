@@ -79,14 +79,16 @@ const projects: Project[] = [
 export default function ProjectsPage() {
   return (
     <div>
-      <h1 className="mb-6 text-4xl font-bold">Projects</h1>
-      <p className="mb-10 max-w-3xl leading-relaxed">
-        Fifteen years of products. B2B platforms, banking design systems,
-        consumer apps, an iOS word game. Range on purpose. Small teams across
-        all of them, simple stacks when the call was mine.
-      </p>
+      <section className="section-prose mb-10">
+        <h1 className="type-page-title mb-6">Projects</h1>
+        <p className="type-lead">
+          Fifteen years of products. B2B platforms, banking design systems,
+          consumer apps, an iOS word game. Range on purpose. Small teams across
+          all of them, simple stacks when the call was mine.
+        </p>
+      </section>
 
-      <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 md:grid-cols-3">
+      <section className="section-wide grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 md:grid-cols-3">
         {projects.map((project) => (
           <div key={project.id} className="space-y-3">
             <a
@@ -101,12 +103,12 @@ export default function ProjectsPage() {
                 color={project.color}
               />
             </a>
-            <p className="text-muted-foreground text-sm leading-relaxed">
+            <p className="text-sm leading-relaxed text-muted-foreground">
               {project.summary}
             </p>
           </div>
         ))}
-      </div>
+      </section>
     </div>
   )
 }

@@ -42,15 +42,15 @@ const disciplines = [
 export default function IdeaLoopPage() {
   return (
     <div className="pb-12">
-      <section className="grid gap-12 border-b border-border pb-16 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.85fr)] lg:items-end lg:gap-20">
-        <div className="max-w-2xl">
+      <section className="section-wide border-b border-border pb-16">
+        <div className="section-prose">
           <p className="mb-8 text-sm font-semibold text-muted-foreground">
             Product IDEA Loop
           </p>
-          <h1 className="text-4xl leading-[1.05] font-semibold tracking-tight text-balance sm:text-5xl lg:text-6xl">
+          <h1 className="type-page-title">
             More affordable attempts. Better decisions.
           </h1>
-          <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted-foreground">
+          <p className="type-lead mt-8 max-w-xl text-muted-foreground">
             A way to build software in the AI era: bring the whole product
             conversation into one focused working session, make something real,
             and use what you learn to choose the next move.
@@ -59,13 +59,13 @@ export default function IdeaLoopPage() {
             href={frameworkUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-9 inline-flex items-center gap-3 bg-foreground px-5 py-3 text-sm font-semibold text-background transition-opacity hover:opacity-75 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
+            className="mt-9 inline-flex items-center gap-3 bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-75 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
           >
             Read the full framework <span aria-hidden="true">↗</span>
           </a>
         </div>
 
-        <figure className="border border-border bg-muted/30 p-5 sm:p-7">
+        <figure className="mx-auto mt-12 max-w-4xl border border-border bg-muted/30 p-5 sm:p-7">
           <figcaption className="mb-5 max-w-sm text-sm leading-relaxed text-muted-foreground">
             Four disciplines stay active together. Each can change the others
             before the loop closes.
@@ -94,11 +94,11 @@ export default function IdeaLoopPage() {
         </figure>
       </section>
 
-      <section className="grid gap-8 border-b border-border py-16 lg:grid-cols-[minmax(0,0.7fr)_minmax(0,1fr)] lg:gap-20">
-        <h2 className="max-w-md text-3xl leading-tight font-semibold tracking-tight sm:text-4xl">
+      <section className="section-prose border-b border-border py-16">
+        <h2 className="type-section-title mb-6">
           The loop replaces a long wait with a useful attempt.
         </h2>
-        <div className="max-w-2xl space-y-5 leading-relaxed text-muted-foreground">
+        <div className="space-y-5 leading-relaxed text-muted-foreground">
           <p>
             Most teams do not run out of ideas. They run out of affordable
             attempts. AI makes it possible to explore a question with working
@@ -117,24 +117,22 @@ export default function IdeaLoopPage() {
         </div>
       </section>
 
-      <section className="border-b border-border py-16">
-        <div className="grid gap-8 lg:grid-cols-[minmax(0,0.7fr)_minmax(0,1fr)] lg:gap-20">
+      <section className="section-prose border-b border-border py-16">
+        <div>
           <div>
-            <h2 className="text-3xl leading-tight font-semibold tracking-tight sm:text-4xl">
-              A loop has a finish line.
-            </h2>
+            <h2 className="type-section-title">A loop has a finish line.</h2>
             <p className="mt-5 max-w-md leading-relaxed text-muted-foreground">
               Most loops run for 1–6 hours. You can pause, but each loop closes
               within 72 hours with a clear record of what changed.
             </p>
           </div>
-          <ol className="divide-y divide-border border-y border-border">
+          <ol className="mt-8 divide-y divide-border border-y border-border">
             <li className="flex gap-5 py-5">
               <span className="w-7 shrink-0 text-sm text-muted-foreground">
                 01
               </span>
               <div>
-                <h3 className="font-semibold">Something concrete</h3>
+                <h3 className="type-subsection-title">Something concrete</h3>
                 <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
                   A prototype, flow, screen, or working slice.
                 </p>
@@ -145,7 +143,7 @@ export default function IdeaLoopPage() {
                 02
               </span>
               <div>
-                <h3 className="font-semibold">What you learned</h3>
+                <h3 className="type-subsection-title">What you learned</h3>
                 <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
                   The evidence that strengthened or challenged the idea.
                 </p>
@@ -156,7 +154,7 @@ export default function IdeaLoopPage() {
                 03
               </span>
               <div>
-                <h3 className="font-semibold">What happens next</h3>
+                <h3 className="type-subsection-title">What happens next</h3>
                 <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
                   Ship, iterate, pivot, or stop.
                 </p>
@@ -166,10 +164,8 @@ export default function IdeaLoopPage() {
         </div>
       </section>
 
-      <section className="max-w-3xl py-16">
-        <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-          Start the next loop stronger.
-        </h2>
+      <section className="section-prose py-16">
+        <h2 className="type-section-title">Start the next loop stronger.</h2>
         <p className="mt-5 max-w-2xl leading-relaxed text-muted-foreground">
           The framework is open and evolving. Read the practical playbook, the
           manifesto, and the ways to contribute on the Product IDEA Loop site.

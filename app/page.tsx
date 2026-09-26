@@ -75,8 +75,7 @@ const techStack: Tech[] = [
     bg: "#000",
     color: "#fff",
     logo: "/img/tech/vercel.svg",
-    reason:
-      "git push is the deploy. The infrastructure layer that disappears.",
+    reason: "git push is the deploy. The infrastructure layer that disappears.",
   },
   {
     id: "linear",
@@ -119,217 +118,231 @@ const techStack: Tech[] = [
 export default function HomePage() {
   return (
     <div>
-      <h1 className="sr-only">Mitesh Shah</h1>
+      <section className="section-prose mb-14">
+        <h1 className="type-page-title mb-7">Get to know me</h1>
 
-      <section className="mb-14 max-w-3xl leading-relaxed">
-        <h2 className="mb-5 text-2xl font-semibold">Get to know me</h2>
-
-        <p className="text-lg">
-          As a kid, I played with Legos a lot. At first, I built the picture.
-          Then, I built what I could picture. Eventually I wanted to build
-          things that I didn&apos;t have the pieces for. And that&apos;s
-          where it began.
-        </p>
-
-        <PullQuote>Solve the problem by building your own pieces.</PullQuote>
-
-        <div className="space-y-5">
-          <p>
-            I&apos;ve been a builder ever since. I couldn&apos;t afford the
-            Lego motors, so I soldered cheap model motors into the housings.
-            I wanted a PlayStation steering wheel, so I broke apart a
-            controller and built one out of styrofoam and cardboard with the
-            original circuitry intact. I fixed a VCR. Wrote songs in Logo
-            beep. Made games. Made apps. Now I bring bigger ideas to life
-            through startups. And I feel like I&apos;m just getting started.
+        <div className="leading-relaxed">
+          <p className="type-lead">
+            As a kid, I played with Legos a lot. At first, I built the picture.
+            Then, I built what I could picture. Eventually I wanted to build
+            things that I didn&apos;t have the pieces for. And that&apos;s where
+            it began.
           </p>
+
+          <PullQuote>Solve the problem by building your own pieces.</PullQuote>
+
+          <div className="space-y-5">
+            <p>
+              I&apos;ve been a builder ever since. I couldn&apos;t afford the
+              Lego motors, so I soldered cheap model motors into the housings. I
+              wanted a PlayStation steering wheel, so I broke apart a controller
+              and built one out of styrofoam and cardboard with the original
+              circuitry intact. I fixed a VCR. Wrote songs in Logo beep. Made
+              games. Made apps. Now I bring bigger ideas to life through
+              startups. And I feel like I&apos;m just getting started.
+            </p>
+            <p>
+              Snap together the right pieces, and we can build anything we want
+              — the right teams, the right software, the right products, and
+              even the right robots.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-prose mb-14">
+        <h2 className="type-section-title mb-2">How I work</h2>
+
+        <div className="space-y-5 leading-relaxed">
+          <p className="text-lg font-semibold">
+            Small teams. Simple stacks. Surface area you can hold in your head.
+          </p>
+
           <p>
-            Snap together the right pieces, and we can build anything we
-            want — the right teams, the right software, the right products,
-            and even the right robots.
+            The work I&apos;m proudest of has come from groups tight enough that
+            one person can hold the whole product in their head, and stacks
+            simple enough that the whole architecture fits there too. People
+            mistake this for a constraint. It&apos;s the opposite. Simplicity is
+            what makes ambitious work possible.
+          </p>
+
+          <p>
+            Every tool, every framework, every additional person has to earn its
+            place. Not by what it&apos;d look like at Netflix scale. Not by
+            what&apos;s in fashion this quarter. The bar is:{" "}
+            <em>does this help us make the thing?</em>
+          </p>
+
+          <p>
+            The hardest one to defend in big organizations is the one I&apos;m
+            most right about: <strong>trust over process.</strong> Process is
+            what you reach for when you don&apos;t trust anyone in the room.
+            With the right people, you don&apos;t need much of it. With the
+            wrong people, no amount of it will save you. And it&apos;s even
+            easier to trust when the team is shipping actual product instead of
+            closing tickets.
           </p>
         </div>
       </section>
 
-      <section className="mb-14 max-w-3xl space-y-5 leading-relaxed">
-        <h2 className="mb-2 text-2xl font-semibold">How I work</h2>
+      <section className="section-prose mb-14">
+        <h2 className="type-section-title mb-5">Why it works</h2>
 
-        <p className="text-lg font-semibold">
-          Small teams. Simple stacks. Surface area you can hold in your head.
-        </p>
-
-        <p>
-          The work I&apos;m proudest of has come from groups tight enough that
-          one person can hold the whole product in their head, and stacks
-          simple enough that the whole architecture fits there too. People
-          mistake this for a constraint. It&apos;s the opposite. Simplicity is
-          what makes ambitious work possible.
-        </p>
-
-        <p>
-          Every tool, every framework, every additional person has to earn its
-          place. Not by what it&apos;d look like at Netflix scale. Not by
-          what&apos;s in fashion this quarter. The bar is:{" "}
-          <em>does this help us make the thing?</em>
-        </p>
-
-        <p>
-          The hardest one to defend in big organizations is the one I&apos;m
-          most right about: <strong>trust over process.</strong> Process is
-          what you reach for when you don&apos;t trust anyone in the room.
-          With the right people, you don&apos;t need much of it. With the
-          wrong people, no amount of it will save you. And it&apos;s even
-          easier to trust when the team is shipping actual product instead
-          of closing tickets.
-        </p>
-      </section>
-
-      <section className="mb-14 max-w-3xl leading-relaxed">
-        <h2 className="mb-5 text-2xl font-semibold">Why it works</h2>
-
-        <p>
-          Big teams have a quiet failure mode. Coordination scales
-          geometrically. Meetings and ceremony eat the runway. Each person
-          looks busy and productive. The organization atrophies.
-        </p>
-
-        <PullQuote>
-          A small group with the right stack will outpace a committee of
-          forty. Almost always.
-        </PullQuote>
-
-        <div className="space-y-5">
+        <div className="leading-relaxed">
           <p>
-            In the AI era, this is even more true. The bottleneck isn&apos;t
-            building speed. It&apos;s decision quality. And decision quality
-            lives in small groups thinking clearly together.
+            Big teams have a quiet failure mode. Coordination scales
+            geometrically. Meetings and ceremony eat the runway. Each person
+            looks busy and productive. The organization atrophies.
           </p>
 
-          <p>That&apos;s the whole game.</p>
+          <PullQuote>
+            A small group with the right stack will outpace a committee of
+            forty. Almost always.
+          </PullQuote>
+
+          <div className="space-y-5">
+            <p>
+              In the AI era, this is even more true. The bottleneck isn&apos;t
+              building speed. It&apos;s decision quality. And decision quality
+              lives in small groups thinking clearly together.
+            </p>
+
+            <p>That&apos;s the whole game.</p>
+          </div>
         </div>
       </section>
 
-      <section className="mb-14 max-w-3xl border-y border-border py-8 leading-relaxed">
-        <p className="mb-3 text-sm font-semibold text-muted-foreground">
-          An idea I keep coming back to
-        </p>
-        <h2 className="mb-4 text-2xl font-semibold">Product IDEA Loop</h2>
-        <p>
-          Insight, Design, Engineering, and Analysis in the same working
-          session. Build something concrete, learn from it, and decide what
-          happens next. The goal is better decisions with every loop.
-        </p>
-        <Link
-          href="/idea-loop"
-          className="mt-5 inline-block font-semibold underline underline-offset-4 hover:opacity-70 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
-        >
-          Explore the IDEA Loop
-        </Link>
+      <section className="section-prose mb-14 border-y border-border py-8">
+        <div>
+          <p className="mb-3 text-sm font-semibold text-muted-foreground">
+            An idea I keep coming back to
+          </p>
+          <h2 className="type-section-title mb-4">Product IDEA Loop</h2>
+        </div>
+        <div className="leading-relaxed">
+          <p>
+            Insight, Design, Engineering, and Analysis in the same working
+            session. Build something concrete, learn from it, and decide what
+            happens next. The goal is better decisions with every loop.
+          </p>
+          <Link
+            href="/idea-loop"
+            className="mt-5 inline-block font-semibold underline underline-offset-4 hover:opacity-70 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
+          >
+            Explore the IDEA Loop
+          </Link>
+        </div>
       </section>
 
-      <section className="mb-14">
-        <h2 className="mb-3 text-2xl font-semibold">The operating system</h2>
-        <p className="text-muted-foreground mb-10 max-w-3xl leading-relaxed">
-          Generally true. Not universal. Each product and startup makes its
-          own intentional choices.
-        </p>
+      <section className="section-prose mb-14">
+        <div className="mb-12">
+          <div>
+            <h2 className="type-section-title mb-3">The operating system</h2>
+            <p className="leading-relaxed text-muted-foreground">
+              Generally true. Not universal. Each product and startup makes its
+              own intentional choices.
+            </p>
+          </div>
 
-        <ol className="mb-10 max-w-3xl list-none space-y-8">
-          <li className="flex gap-6">
-            <span className="text-muted-foreground w-8 shrink-0 pt-1 font-mono text-sm">
-              00
-            </span>
-            <div className="flex-1 space-y-2 leading-relaxed">
-              <p className="font-semibold">AI-first from here on out.</p>
-              <p>Think with AI. Do with AI. Build with AI.</p>
-            </div>
-          </li>
-          <li className="flex gap-6">
-            <span className="text-muted-foreground w-8 shrink-0 pt-1 font-mono text-sm">
-              01
-            </span>
-            <div className="flex-1 space-y-2 leading-relaxed">
-              <p className="font-semibold">Sketch it out.</p>
-              <p>
-                Build a prototype with AI in v0 or Replit instead of a doc or
-                slide deck. It answers questions up front. Kills bad ideas
-                earlier. Strengthens great ones until your teammates are
-                thrilled to build them.
-              </p>
-            </div>
-          </li>
-          <li className="flex gap-6">
-            <span className="text-muted-foreground w-8 shrink-0 pt-1 font-mono text-sm">
-              02
-            </span>
-            <div className="flex-1 space-y-2 leading-relaxed">
-              <p className="font-semibold">
-                TypeScript / JavaScript everywhere.
-              </p>
-              <p>
-                Frontend, backend, even native. Seamless prototyping. Code
-                reuse across boundaries.
-              </p>
-            </div>
-          </li>
-          <li className="flex gap-6">
-            <span className="text-muted-foreground w-8 shrink-0 pt-1 font-mono text-sm">
-              03
-            </span>
-            <div className="flex-1 space-y-2 leading-relaxed">
-              <p className="font-semibold">Intentional frugality.</p>
-              <p>
-                Not chasing token leaderboards. Not opening 10 agent windows
-                at once. Not hiring 5 engineers at once.
-              </p>
-            </div>
-          </li>
-          <li className="flex gap-6">
-            <span className="text-muted-foreground w-8 shrink-0 pt-1 font-mono text-sm">
-              04
-            </span>
-            <div className="flex-1 space-y-2 leading-relaxed">
-              <p className="font-semibold">
-                Assume rewrites are cheap when needed.
-              </p>
-              <p>
-                Need a native Swift app? Cutting-edge Apple SDKs?
-                Platform-grade transitions? First we answer why. By Series B,
-                the native team is affordable.
-              </p>
-            </div>
-          </li>
-          <li className="flex gap-6">
-            <span className="text-muted-foreground w-8 shrink-0 pt-1 font-mono text-sm">
-              05
-            </span>
-            <div className="flex-1 space-y-2 leading-relaxed">
-              <p className="font-semibold">
-                5 people × 10 hours ≠ 10 people × 5 hours.
-              </p>
-              <p>
-                Same person-hours on paper. One ships. The other ships
-                nothing.
-              </p>
-            </div>
-          </li>
-          <li className="flex gap-6">
-            <span className="text-muted-foreground w-8 shrink-0 pt-1 font-mono text-sm">
-              06
-            </span>
-            <div className="flex-1 space-y-2 leading-relaxed">
-              <p className="font-semibold">Less ceremony.</p>
-              <p>
-                Minimize recurring meetings. Match &ldquo;talk about
-                work&rdquo; with at least as much &ldquo;do the work.&rdquo;
-                Agile and Scrum? While you&apos;re at it, throw the whole
-                thing out.
-              </p>
-            </div>
-          </li>
-        </ol>
+          <ol className="mt-8 list-none space-y-8">
+            <li className="flex gap-6">
+              <span className="w-8 shrink-0 pt-1 font-mono text-sm text-muted-foreground">
+                00
+              </span>
+              <div className="flex-1 space-y-2 leading-relaxed">
+                <p className="font-semibold">AI-first from here on out.</p>
+                <p>Think with AI. Do with AI. Build with AI.</p>
+              </div>
+            </li>
+            <li className="flex gap-6">
+              <span className="w-8 shrink-0 pt-1 font-mono text-sm text-muted-foreground">
+                01
+              </span>
+              <div className="flex-1 space-y-2 leading-relaxed">
+                <p className="font-semibold">Sketch it out.</p>
+                <p>
+                  Build a prototype with AI in v0 or Replit instead of a doc or
+                  slide deck. It answers questions up front. Kills bad ideas
+                  earlier. Strengthens great ones until your teammates are
+                  thrilled to build them.
+                </p>
+              </div>
+            </li>
+            <li className="flex gap-6">
+              <span className="w-8 shrink-0 pt-1 font-mono text-sm text-muted-foreground">
+                02
+              </span>
+              <div className="flex-1 space-y-2 leading-relaxed">
+                <p className="font-semibold">
+                  TypeScript / JavaScript everywhere.
+                </p>
+                <p>
+                  Frontend, backend, even native. Seamless prototyping. Code
+                  reuse across boundaries.
+                </p>
+              </div>
+            </li>
+            <li className="flex gap-6">
+              <span className="w-8 shrink-0 pt-1 font-mono text-sm text-muted-foreground">
+                03
+              </span>
+              <div className="flex-1 space-y-2 leading-relaxed">
+                <p className="font-semibold">Intentional frugality.</p>
+                <p>
+                  Not chasing token leaderboards. Not opening 10 agent windows
+                  at once. Not hiring 5 engineers at once.
+                </p>
+              </div>
+            </li>
+            <li className="flex gap-6">
+              <span className="w-8 shrink-0 pt-1 font-mono text-sm text-muted-foreground">
+                04
+              </span>
+              <div className="flex-1 space-y-2 leading-relaxed">
+                <p className="font-semibold">
+                  Assume rewrites are cheap when needed.
+                </p>
+                <p>
+                  Need a native Swift app? Cutting-edge Apple SDKs?
+                  Platform-grade transitions? First we answer why. By Series B,
+                  the native team is affordable.
+                </p>
+              </div>
+            </li>
+            <li className="flex gap-6">
+              <span className="w-8 shrink-0 pt-1 font-mono text-sm text-muted-foreground">
+                05
+              </span>
+              <div className="flex-1 space-y-2 leading-relaxed">
+                <p className="font-semibold">
+                  5 people × 10 hours ≠ 10 people × 5 hours.
+                </p>
+                <p>
+                  Same person-hours on paper. One ships. The other ships
+                  nothing.
+                </p>
+              </div>
+            </li>
+            <li className="flex gap-6">
+              <span className="w-8 shrink-0 pt-1 font-mono text-sm text-muted-foreground">
+                06
+              </span>
+              <div className="flex-1 space-y-2 leading-relaxed">
+                <p className="font-semibold">Less ceremony.</p>
+                <p>
+                  Minimize recurring meetings. Match &ldquo;talk about
+                  work&rdquo; with at least as much &ldquo;do the work.&rdquo;
+                  Agile and Scrum? While you&apos;re at it, throw the whole
+                  thing out.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
 
-        <p className="text-muted-foreground mb-6 text-sm font-medium">
+      <section className="section-wide mb-14">
+        <p className="mb-6 text-sm font-medium text-muted-foreground">
           Some preferred tools and technologies
         </p>
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 md:grid-cols-3">
@@ -341,7 +354,7 @@ export default function HomePage() {
                 bg={t.bg}
                 logo={t.logo}
               />
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-sm leading-relaxed text-muted-foreground">
                 {t.reason}
               </p>
             </div>
@@ -349,7 +362,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mb-10 flex flex-wrap gap-x-8 gap-y-2 text-sm">
+      <section className="section-prose mb-10 flex flex-wrap gap-x-8 gap-y-2 text-sm">
         <span>Want to chat more?</span>
         <ObfuscatedEmail className="hover:underline" />
         <ObfuscatedPhone className="hover:underline" prefix="text: " />

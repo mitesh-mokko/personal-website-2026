@@ -65,85 +65,87 @@ const useCases: UseCase[] = [
 
 export default function FsdHintsPage() {
   return (
-    <div className="fsd-page space-y-20 pb-10">
-      <section className="border-b border-border pb-20">
-        <div className="grid items-end gap-12 lg:grid-cols-[0.9fr_1fr]">
-          <div>
-            <div className="mb-8 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs tracking-[0.16em] uppercase">
-              <span className="text-sm font-semibold tracking-tight text-foreground">
-                FSD Hints
-              </span>
-              <Separator
-                orientation="vertical"
-                className="h-3 w-px"
-                aria-hidden="true"
-              />
-              <span className="flex items-center gap-3 text-muted-foreground">
-                <span className="fsd-live-dot text-foreground" />
-                Independent product concept / Tesla FSD
-              </span>
-            </div>
-
-            <h1 className="max-w-3xl text-5xl leading-[0.95] font-semibold tracking-[-0.04em] text-balance sm:text-6xl lg:text-5xl">
-              FSD can finally take a hint.
-            </h1>
-
-            <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              Give Tesla&apos;s driving agent the context you have in your head—
-              without taking over the wheel.
-            </p>
-
-            <div className="mt-10 flex flex-wrap items-center gap-4 text-sm">
-              <a
-                href="#the-idea"
-                className="inline-flex items-center gap-2 bg-foreground px-4 py-2 text-background transition-opacity hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
-              >
-                See the idea <span aria-hidden="true">↓</span>
-              </a>
-            </div>
+    <div className="fsd-page space-y-16 pb-10">
+      <section className="section-wide border-b border-border pb-16">
+        <div className="section-prose">
+          <div className="mb-8 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs tracking-[0.16em] uppercase">
+            <span className="text-sm font-semibold tracking-tight text-foreground">
+              FSD Hints
+            </span>
+            <Separator
+              orientation="vertical"
+              className="h-3 w-px"
+              aria-hidden="true"
+            />
+            <span className="flex items-center gap-3 text-muted-foreground">
+              <span className="fsd-live-dot text-foreground" />
+              Independent product concept / Tesla FSD
+            </span>
           </div>
 
+          <h1 className="type-page-title max-w-3xl">
+            FSD can finally take a hint.
+          </h1>
+
+          <p className="type-lead mt-8 max-w-2xl text-muted-foreground">
+            Give Tesla&apos;s driving agent the context you have in your head—
+            without taking over the wheel.
+          </p>
+
+          <div className="mt-10 flex flex-wrap items-center gap-4 text-sm">
+            <a
+              href="#the-idea"
+              className="inline-flex items-center gap-2 bg-primary px-4 py-2 text-primary-foreground transition-opacity hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
+            >
+              See the idea <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+        </div>
+
+        <div className="mx-auto mt-12 max-w-4xl">
           <HeroImage />
         </div>
       </section>
 
-      <section id="the-idea" className="border-b border-border pb-20">
-        <div className="grid gap-10 lg:grid-cols-[0.6fr_1fr] lg:gap-20">
-          <div>
-            <p className="fsd-kicker text-muted-foreground">The idea</p>
-            <h2 className="mt-4 max-w-sm text-3xl leading-tight font-semibold tracking-tight sm:text-4xl">
-              A disengagement is an expensive way to say, “not that.”
-            </h2>
-          </div>
-          <div className="max-w-2xl space-y-5 text-lg leading-relaxed text-muted-foreground">
-            <p>
-              Today, when FSD makes a choice a driver dislikes, the driver often
-              has one blunt instrument: take over. The entire driving task is
-              interrupted to communicate a preference that could be as small as
-              “don&apos;t change lanes yet.”
-            </p>
-            <p>
-              FSD Hints creates a lower-cost communication channel. The human
-              provides context. FSD keeps authority over the vehicle, evaluates
-              the hint against safety and the route, then lets it expire when it
-              is no longer useful.
-            </p>
-            <div className="border-l-2 border-foreground pl-5 text-xl leading-tight font-semibold text-foreground">
-              Context, not control.
-            </div>
+      <section
+        id="the-idea"
+        className="section-prose border-b border-border pb-16"
+      >
+        <div className="mb-6">
+          <p className="fsd-kicker text-muted-foreground">The idea</p>
+          <h2 className="type-section-title mt-4 max-w-sm">
+            A disengagement is an expensive way to say, “not that.”
+          </h2>
+        </div>
+        <div className="space-y-5 text-lg leading-relaxed text-muted-foreground">
+          <p>
+            Today, when FSD makes a choice a driver dislikes, the driver often
+            has one blunt instrument: take over. The entire driving task is
+            interrupted to communicate a preference that could be as small as
+            “don&apos;t change lanes yet.”
+          </p>
+          <p>
+            FSD Hints creates a lower-cost communication channel. The human
+            provides context. FSD keeps authority over the vehicle, evaluates
+            the hint against safety and the route, then lets it expire when it
+            is no longer useful.
+          </p>
+          <div className="border-l-2 border-foreground pl-5 text-xl leading-tight font-semibold text-foreground">
+            Context, not control.
           </div>
         </div>
       </section>
 
-      <section id="use-cases" className="border-b border-border pb-20">
-        <div className="mb-10 flex flex-wrap items-end justify-between gap-5">
+      <section
+        id="use-cases"
+        className="section-wide border-b border-border pb-16"
+      >
+        <div className="section-prose mb-10">
           <div>
             <p className="fsd-kicker text-muted-foreground">What you can say</p>
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
-              Hints have a scope.
-            </h2>
+            <h2 className="type-section-title mt-4">Hints have a scope.</h2>
           </div>
-          <p className="max-w-sm text-xs leading-5 tracking-[0.12em] text-muted-foreground uppercase">
+          <p className="mt-5 text-xs leading-5 tracking-[0.12em] text-muted-foreground uppercase">
             Preference + context window, bounded by the driving system
           </p>
         </div>
@@ -183,7 +185,7 @@ export default function FsdHintsPage() {
                   ))}
                 </ul>
               </CardContent>
-              <CardFooter className="mt-auto p-6 sm:p-8">
+              <CardFooter className="mt-auto p-6 sm:p-8 lg:min-h-36">
                 <p className="text-[0.62rem] leading-5 tracking-[0.08em] text-muted-foreground uppercase">
                   {useCase.note}
                 </p>
@@ -193,19 +195,20 @@ export default function FsdHintsPage() {
         </div>
       </section>
 
-      <section id="boundary" className="border-b border-border pb-20">
-        <div className="mb-10 max-w-md">
+      <section
+        id="boundary"
+        className="section-wide border-b border-border pb-16"
+      >
+        <div className="section-prose mb-10">
           <p className="fsd-kicker text-muted-foreground">The boundary</p>
-          <h2 className="mt-4 text-3xl leading-tight font-semibold tracking-tight sm:text-4xl">
-            A hint is not a command.
-          </h2>
+          <h2 className="type-section-title mt-4">A hint is not a command.</h2>
         </div>
         <BoundaryDiagram />
         <div className="mt-4 border border-border bg-muted/30 p-5 sm:p-6">
           <div className="flex flex-wrap items-baseline justify-between gap-5">
             <div>
               <p className="fsd-kicker text-muted-foreground">V1 constraint</p>
-              <h3 className="mt-3 text-xl font-semibold tracking-tight">
+              <h3 className="type-subsection-title mt-3">
                 One active hint at a time.
               </h3>
             </div>
@@ -217,13 +220,16 @@ export default function FsdHintsPage() {
         </div>
       </section>
 
-      <section id="experiment" className="border-b border-border pb-20">
-        <p className="fsd-kicker text-muted-foreground">The experiment</p>
-        <div className="mt-4 grid gap-10 lg:grid-cols-[0.8fr_1fr] lg:gap-20">
-          <h2 className="max-w-xl text-4xl leading-tight font-semibold tracking-tight sm:text-5xl">
+      <section
+        id="experiment"
+        className="section-wide border-b border-border pb-16"
+      >
+        <div className="section-prose">
+          <p className="fsd-kicker text-muted-foreground">The experiment</p>
+          <h2 className="type-section-title mt-4">
             Make disagreement cheaper.
           </h2>
-          <div>
+          <div className="mt-6">
             <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
               Start with a small, supervised experiment. Measure whether drivers
               use hints to communicate preferences that would otherwise cause a
@@ -233,41 +239,41 @@ export default function FsdHintsPage() {
             <p className="mt-4 text-xs tracking-[0.1em] text-muted-foreground uppercase">
               No results claimed yet. This is the proposed measurement plan.
             </p>
-            <div className="mt-8 grid gap-px overflow-hidden border border-border bg-border sm:grid-cols-2">
-              <Metric
-                category="Primary outcome"
-                value="↓"
-                label="Fewer disengagements over minor frustrations"
-                description="Takeovers associated with common preference moments: lane choice, passing, speed comfort, and parking."
-              />
-              <Metric
-                category="Primary outcome"
-                value="↑"
-                label="Longer FSD streaks"
-                description="Median time or miles between manual takeovers."
-              />
-              <Metric
-                category="Secondary"
-                value="↗"
-                label="Hint resolution rate"
-                description="Hints accepted, completed, or clearly declined by FSD."
-              />
-              <Metric
-                category="Guardrail"
-                value="!"
-                label="Post-hint intervention rate"
-                description="Manual takeovers, cancellations, or repeated corrections after a hint."
-              />
-            </div>
           </div>
+        </div>
+        <div className="mt-8 grid gap-px overflow-hidden border border-border bg-border sm:grid-cols-2">
+          <Metric
+            category="Primary outcome"
+            value="↓"
+            label="Fewer disengagements over minor frustrations"
+            description="Takeovers associated with common preference moments: lane choice, passing, speed comfort, and parking."
+          />
+          <Metric
+            category="Primary outcome"
+            value="↑"
+            label="Longer FSD streaks"
+            description="Median time or miles between manual takeovers."
+          />
+          <Metric
+            category="Secondary"
+            value="↗"
+            label="Hint resolution rate"
+            description="Hints accepted, completed, or clearly declined by FSD."
+          />
+          <Metric
+            category="Guardrail"
+            value="!"
+            label="Post-hint intervention rate"
+            description="Manual takeovers, cancellations, or repeated corrections after a hint."
+          />
         </div>
       </section>
 
-      <section className="mx-auto max-w-3xl text-center">
+      <section className="section-prose text-center">
         <p className="fsd-kicker text-muted-foreground">
           A small idea about a big transition
         </p>
-        <h2 className="mt-5 text-4xl leading-tight font-semibold tracking-tight sm:text-5xl">
+        <h2 className="type-section-title mt-5">
           Let the driver stay in the conversation.
         </h2>
         <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
@@ -303,7 +309,7 @@ export default function FsdHintsPage() {
 
 function HeroImage() {
   return (
-    <div className="mx-auto w-full max-w-[35rem]">
+    <div className="w-full">
       <div className="overflow-hidden rounded-2xl">
         <Image
           src="/img/tesla-fsd-hints-hero.png"
@@ -311,7 +317,7 @@ function HeroImage() {
           width={1536}
           height={1024}
           priority
-          sizes="(min-width: 1024px) 48vw, 100vw"
+          sizes="(min-width: 1536px) 56rem, (min-width: 1024px) 80vw, 100vw"
           className="block h-auto w-full"
         />
       </div>
@@ -386,7 +392,7 @@ function DiagramNode({
       >
         {step}
       </span>
-      <h3 className="mt-10 text-lg font-semibold tracking-tight">{title}</h3>
+      <h3 className="type-subsection-title mt-10">{title}</h3>
       <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
         {copy}
       </p>

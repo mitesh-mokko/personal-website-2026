@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next"
-import { Geist, JetBrains_Mono } from "next/font/google"
+import { Bricolage_Grotesque, Inter, JetBrains_Mono } from "next/font/google"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -7,9 +7,14 @@ import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { cn } from "@/lib/utils"
 
-const fontSans = Geist({
+const fontSans = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
+})
+
+const fontDisplay = Bricolage_Grotesque({
+  subsets: ["latin"],
+  variable: "--font-display",
 })
 
 const jetbrainsMono = JetBrains_Mono({
@@ -28,7 +33,9 @@ export const metadata: Metadata = {
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
     ],
     apple: { url: "/apple-touch-icon.png", sizes: "180x180" },
-    other: [{ rel: "mask-icon", url: "/safari-pinned-tab.svg", color: "#ff4400" }],
+    other: [
+      { rel: "mask-icon", url: "/safari-pinned-tab.svg", color: "#ff4400" },
+    ],
   },
   openGraph: {
     type: "website",
@@ -39,7 +46,10 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: "#fff",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#fcfcfc" },
+    { media: "(prefers-color-scheme: dark)", color: "#111111" },
+  ],
 }
 
 export default function RootLayout({
@@ -54,14 +64,14 @@ export default function RootLayout({
       className={cn(
         "antialiased",
         fontSans.variable,
-        "font-mono",
-        jetbrainsMono.variable,
+        fontDisplay.variable,
+        jetbrainsMono.variable
       )}
     >
       <body className="flex min-h-svh flex-col">
         <ThemeProvider>
           <Navbar />
-          <main className="mx-auto w-full max-w-6xl flex-1 px-6 py-10">
+          <main className="mx-auto w-full max-w-[96rem] flex-1 px-6 py-10 sm:px-8 lg:px-10">
             {children}
           </main>
           <Footer />

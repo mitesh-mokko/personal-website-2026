@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-heading: var(--font-mono);
+  --font-heading: var(--font-display);
   --font-mono: var(--font-mono);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -48,72 +48,72 @@
 }
 
 :root {
-  --background: oklch(0.985 0.006 326);
-  --foreground: oklch(0.145 0.008 326);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0.008 326);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0.008 326);
-  --primary: oklch(0.212 0.019 322.12);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.96 0.003 325.6);
-  --secondary-foreground: oklch(0.212 0.019 322.12);
-  --muted: oklch(0.96 0.003 325.6);
-  --muted-foreground: oklch(0.542 0.034 322.5);
-  --accent: oklch(0.96 0.003 325.6);
-  --accent-foreground: oklch(0.212 0.019 322.12);
+  --background: #fcfcfc;
+  --foreground: #171717;
+  --card: #ffffff;
+  --card-foreground: #171717;
+  --popover: #ffffff;
+  --popover-foreground: #171717;
+  --primary: #222222;
+  --primary-foreground: #ffffff;
+  --secondary: #f0f0f0;
+  --secondary-foreground: #222222;
+  --muted: #f3f3f3;
+  --muted-foreground: #606060;
+  --accent: #ededed;
+  --accent-foreground: #171717;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0.005 325.62);
-  --input: oklch(0.922 0.005 325.62);
-  --ring: oklch(0.711 0.019 323.02);
-  --chart-1: oklch(0.865 0.012 325.68);
-  --chart-2: oklch(0.542 0.034 322.5);
-  --chart-3: oklch(0.435 0.029 321.78);
-  --chart-4: oklch(0.364 0.029 323.89);
-  --chart-5: oklch(0.263 0.024 320.12);
+  --border: #e4e4e4;
+  --input: #e4e4e4;
+  --ring: #707070;
+  --chart-1: #e7e7e7;
+  --chart-2: #c5c5c5;
+  --chart-3: #969696;
+  --chart-4: #646464;
+  --chart-5: #303030;
   --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0.008 326);
-  --sidebar-primary: oklch(0.212 0.019 322.12);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.96 0.003 325.6);
-  --sidebar-accent-foreground: oklch(0.212 0.019 322.12);
-  --sidebar-border: oklch(0.922 0.005 325.62);
-  --sidebar-ring: oklch(0.711 0.019 323.02);
+  --sidebar: #ffffff;
+  --sidebar-foreground: #171717;
+  --sidebar-primary: #222222;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #ededed;
+  --sidebar-accent-foreground: #171717;
+  --sidebar-border: #e4e4e4;
+  --sidebar-ring: #707070;
 }
 
 .dark {
-  --background: oklch(0.27 0.015 322);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.34 0.018 322.12);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.34 0.018 322.12);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0.005 325.62);
-  --primary-foreground: oklch(0.212 0.019 322.12);
-  --secondary: oklch(0.4 0.022 320);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.4 0.022 320);
-  --muted-foreground: oklch(0.711 0.019 323.02);
-  --accent: oklch(0.4 0.022 320);
-  --accent-foreground: oklch(0.985 0 0);
+  --background: #111111;
+  --foreground: #fcfcfc;
+  --card: #202020;
+  --card-foreground: #fcfcfc;
+  --popover: #242424;
+  --popover-foreground: #fcfcfc;
+  --primary: #f1f1f1;
+  --primary-foreground: #171717;
+  --secondary: #303030;
+  --secondary-foreground: #f1f1f1;
+  --muted: #242424;
+  --muted-foreground: #adadad;
+  --accent: #343434;
+  --accent-foreground: #fcfcfc;
   --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.542 0.034 322.5);
-  --chart-1: oklch(0.865 0.012 325.68);
-  --chart-2: oklch(0.542 0.034 322.5);
-  --chart-3: oklch(0.435 0.029 321.78);
-  --chart-4: oklch(0.364 0.029 323.89);
-  --chart-5: oklch(0.263 0.024 320.12);
-  --sidebar: oklch(0.34 0.018 322.12);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.4 0.022 320);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.542 0.034 322.5);
+  --border: #383838;
+  --input: #383838;
+  --ring: #a0a0a0;
+  --chart-1: #e7e7e7;
+  --chart-2: #c5c5c5;
+  --chart-3: #969696;
+  --chart-4: #646464;
+  --chart-5: #303030;
+  --sidebar: #202020;
+  --sidebar-foreground: #fcfcfc;
+  --sidebar-primary: #f1f1f1;
+  --sidebar-primary-foreground: #171717;
+  --sidebar-accent: #343434;
+  --sidebar-accent-foreground: #fcfcfc;
+  --sidebar-border: #383838;
+  --sidebar-ring: #a0a0a0;
 }
 
 @layer base {
@@ -128,12 +128,74 @@
     cursor: pointer;
   }
   html {
-    @apply font-mono;
+    font-family: var(--font-sans), Arial, sans-serif;
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display), Arial, sans-serif;
+  }
+  ::selection {
+    background: var(--accent);
+    color: var(--accent-foreground);
+  }
+}
+
+@layer components {
+  .section-prose {
+    width: 100%;
+    max-width: 44rem;
+    margin-inline: auto;
+  }
+
+  .section-wide {
+    width: 100%;
+    max-width: 88rem;
+    margin-inline: auto;
+  }
+
+  .type-page-title {
+    font-family: var(--font-display), Arial, sans-serif;
+    font-size: clamp(2.25rem, 6vw, 3rem);
+    font-weight: 600;
+    letter-spacing: -0.035em;
+    line-height: 1.08;
+    text-wrap: balance;
+  }
+
+  .type-section-title {
+    font-family: var(--font-display), Arial, sans-serif;
+    font-size: clamp(1.625rem, 4vw, 2rem);
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 1.18;
+    text-wrap: balance;
+  }
+
+  .type-subsection-title {
+    font-family: var(--font-display), Arial, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    line-height: 1.3;
+  }
+
+  .type-pullquote {
+    font-family: var(--font-display), Arial, sans-serif;
+    font-size: clamp(1.375rem, 3.5vw, 1.75rem);
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 1.25;
+  }
+
+  .type-lead {
+    font-size: 1.125rem;
+    line-height: 1.65;
   }
 }
 
 .fsd-page {
-  font-family: var(--font-mono), monospace;
+  font-family: var(--font-sans), Arial, sans-serif;
 }
 
 .fsd-kicker {
@@ -145,9 +207,9 @@
 }
 
 .fsd-live-dot {
-  background: #7de2d1;
+  background: var(--foreground);
   border-radius: 999px;
-  box-shadow: 0 0 14px rgba(125, 226, 209, 0.8);
+  box-shadow: 0 0 10px color-mix(in srgb, var(--foreground) 45%, transparent);
   display: inline-block;
   height: 6px;
   width: 6px;
