@@ -87,13 +87,22 @@ const techStack: Tech[] = [
       "A branch becomes a working preview. Feedback can happen on the product before anything goes live.",
   },
   {
+    id: "posthog",
+    name: "PostHog",
+    bg: "#F54E00",
+    color: "#fff",
+    mark: "ph",
+    reason:
+      "Product analytics and experiments in one place. Measure what people actually do, test changes, and feed the next product decision.",
+  },
+  {
     id: "linear",
     name: "Linear",
     bg: "#5E6AD2",
     color: "#fff",
     logo: "/img/tech/linear.svg",
     reason:
-      "Keeps priorities and decisions visible without making the team perform process for its own sake.",
+      "When there’s a team, keep projects, backlogs, and ownership visible so people can coordinate without turning every decision into a meeting.",
   },
   {
     id: "claude",
@@ -396,8 +405,8 @@ export default function HomePage() {
             </h3>
             <p className="leading-relaxed text-muted-foreground">
               One language across the product where it helps. Services that take
-              work off a small team. AI tools for thinking and making, with a
-              person still responsible for the call. Here are some current
+              work off a small team. Tools to measure what happens, coordinate
+              when there&apos;s a team, and think with AI. Here are some current
               favorites and why they earn a place.
             </p>
           </div>
