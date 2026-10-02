@@ -45,6 +45,17 @@ const projects: Project[] = [
       "iOS word game. Form words from tiles to battle the Scroodles across 180+ levels.",
   },
   {
+    id: "tiffinity",
+    name: "Tiffinity",
+    link: "https://tiffinity.food",
+    bg: "#f4e5d6",
+    color: "#202020",
+    logo: "/img/projects/tiffinity-wordmark.png",
+    context: "Coming back",
+    summary:
+      "Connecting home cooks with people looking for home-cooked food. A major chapter of my life, now returning for its next chapter.",
+  },
+  {
     id: "personify",
     name: "Personify",
     link: "https://personifyhq.com",
